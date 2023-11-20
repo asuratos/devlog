@@ -6,3 +6,5 @@ page_template = "blog-page.html"
 +++
 
 Here is an index of blog posts, some of which are blah
+
+> List of all *[tags](/tags)*
