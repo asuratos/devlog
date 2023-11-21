@@ -16,7 +16,7 @@ taxonomies = [
     {name = "tags", feed = true},
 ]
 
-ignored_content = ["**/page_templates/**", "content/.obsidian"]
+ignored_content = ["**/page_templates/*", "**/.obsidian/*"]
 
 [markdown]
 # Whether to do syntax highlighting
