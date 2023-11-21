@@ -2,7 +2,7 @@
 base_url = "https://asuratos.github.io/portfolio/"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
@@ -26,6 +26,11 @@ render_emoji = true
 external_links_target_blank = true
 smart_punctuation = true
 highlight_theme = "gruvbox-dark"
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
 
 [extra]
 # Put all your custom variables here

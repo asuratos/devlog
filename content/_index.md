@@ -3,12 +3,7 @@ title = "Index"
 template = "index.html"
 page_template = "page.html"
 +++
-This is a test
 
-test
+Hello, I'm Aldrich Suratos. I'm a Data Analyst living in Japan just trying to figure out web dev and related skills.
 
-the top of the index landing page, don't really know what to put here yet
-
-Welcome to the website, where I try to use this as a blah
-
-of course
+This blog will primarily be a portfolio and playground of sorts, something like a creative output while I try to grapple with skilling up in my spare time.
