@@ -41,9 +41,9 @@ default_theme = "dark"
 list_pages = true
 
 header_nav = [
-  { url = "devlog/", name_en = "/home/"},
-  { url = "devlog/about", name_en = "/about/"},
+  { url = "@/", name_en = "/home/"},
+  { url = "@/about", name_en = "/about/"},
   # { url = "/journal", name_en = "/journal/"},
-  { url = "devlog/blog", name_en = "/blog/"},
+  { url = "@/blog", name_en = "/blog/"},
   # { url = "/extra", name_en = "/?/"}
 ]
