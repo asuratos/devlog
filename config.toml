@@ -45,5 +45,6 @@ header_nav = [
   # { url = "@/about", name_en = "/about/"},
   # { url = "/journal", name_en = "/journal/"},
   { url = "@/blog/_index.md", name_en = "/blog/"},
+  { url = "/tags", name_en = "/tags/"},
   # { url = "/extra", name_en = "/?/"}
 ]
