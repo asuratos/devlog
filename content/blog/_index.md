@@ -6,4 +6,4 @@ template = "section.html"
 page_template = "blog-page.html"
 +++
 
-> to see a  tags, go here: *[tags](/tags)*
+> to see all tags, go here: *[tags]({% get_url("@/tags") %})*
