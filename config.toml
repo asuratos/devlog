@@ -14,6 +14,7 @@ generate_feed = true
 default_language = "en"
 taxonomies = [
     {name = "tags", feed = true},
+    {name = "projects", feed = true},
 ]
 
 ignored_content = ["**/page_templates/*", "**/.obsidian/*"]
@@ -46,5 +47,6 @@ header_nav = [
   # { url = "/journal", name_en = "/journal/"},
   { url = "@/blog/_index.md", name_en = "/blog/"},
   { url = "/tags", name_en = "/tags/"},
+  { url = "/projects", name_en = "/projects/"},
   # { url = "/extra", name_en = "/?/"}
 ]
