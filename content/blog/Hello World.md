@@ -3,6 +3,7 @@ title = "Hello, world"
 date = 2023-11-21
 [taxonomies]
   tags = ["reflections"]
+  projects = ["blog", "webdev"]
 +++
 
 So here begins yet another blog. I've tried blogging a few times in my life, and I never really ended up sticking to it.
