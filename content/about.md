@@ -26,4 +26,5 @@ I'm Aldrich. I'm a Data Scientist living in Japan just trying to figure out web 
 
 
 [1] There are more than just the three projects linked above, I just chose those as the furthest developed of each language, like representatives of sorts.
+
 [2] While the generation portion of the library is incomplete, the map struct itself should be fully usable, albeit untested
