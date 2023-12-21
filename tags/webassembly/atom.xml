@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - webassembly</title>
+    <subtitle>A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas.</subtitle>
+    <link href="https://asuratos.github.io/devlog/tags/webassembly/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://asuratos.github.io/devlog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-11-26T00:00:00+00:00</updated>
+    <id>https://asuratos.github.io/devlog/tags/webassembly/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A Foray into SDL2 and WASM in Rust #1</title>
+        <published>2023-11-26T00:00:00+00:00</published>
+        <updated>2023-11-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://asuratos.github.io/devlog/blog/first-steps-in-sdl2-and-wasm/" type="text/html"/>
+        <id>https://asuratos.github.io/devlog/blog/first-steps-in-sdl2-and-wasm/</id>
+        
+        <content type="html">&lt;h2 id=&quot;day-1&quot;&gt;Day 1&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;sdl2-rust-getting-things-installed&quot;&gt;SDL2-Rust: Getting things installed&lt;&#x2F;h3&gt;
+&lt;p&gt;The most difficult part of this was installing SDL properly on Windows.
+I had to look through quite a few of the google results before I found a tutorial I could use, and now writing this I can’t find it again!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;gray-screen-of-life&quot;&gt;Gray screen of life&lt;&#x2F;h3&gt;
+&lt;p&gt;Working with the SDL2 library in Rust was surprisingly not too complicated.
+I guess it just makes sense to me to think about the flow of a program.
+Also it probably helps that I’ve tried and failed to build several games at this point.
+One of these days, I’m going to finish one.&lt;&#x2F;p&gt;
+&lt;div &gt;
+  &lt;img src=&quot;hi_earth.png&quot; alt=&quot;I can make a blank screen, yay&quot;&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;For now, I got a window to pop up. I can set its size, title, and the single color that will make up its entire space. I can also quit out by hitting Esc. It’s not much, but it’s a start.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;webassembly&quot;&gt;Webassembly&lt;&#x2F;h2&gt;
+&lt;p&gt;Once again, getting the required libraries and their dependencies made this a nightmare. 
+By the time I was able to even attempt compiling to WASM, it was already late and my brain wasn’t working at full power anymore.&lt;&#x2F;p&gt;
+&lt;p&gt;…and that’s it for now. Baby steps. Next one is trying to get an SDL2 window to compile into WASM, then maybe I can have something more interesting to embed onto these blog posts.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

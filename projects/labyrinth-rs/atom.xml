@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - labyrinth_rs</title>
+    <subtitle>A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas.</subtitle>
+    <link href="https://asuratos.github.io/devlog/projects/labyrinth-rs/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://asuratos.github.io/devlog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-12-21T00:00:00+00:00</updated>
+    <id>https://asuratos.github.io/devlog/projects/labyrinth-rs/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Project Revisit 1: Labyrinth</title>
+        <published>2023-12-21T00:00:00+00:00</published>
+        <updated>2023-12-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://asuratos.github.io/devlog/blog/project-revisit-1-labyrinth/" type="text/html"/>
+        <id>https://asuratos.github.io/devlog/blog/project-revisit-1-labyrinth/</id>
+        
+        <content type="html">&lt;p&gt;Let’s take a look at one of my more recent projects, one that’s most likely to come back from the dead: a map and procedural generation library for roguelike development called &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;asuratos&#x2F;labyrinth-rs&quot;&gt;labyrinth_rs&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;Labyrinth came about when I was attempting to build a roguelike, and I was considering how to do pathfinding when different modes of traversal were available. Often, roguelike maps assume only one way of traversal: walking, and other methods are exceptions to the rule (i.e. “flying” is just walking over a pit if the entity has a &lt;code&gt;can_fly&lt;&#x2F;code&gt; tag, entities can only walk into water tiles when an entity has the &lt;code&gt;can_swim&lt;&#x2F;code&gt;, etc).&lt;&#x2F;p&gt;
+&lt;p&gt;That way of doing things is well and good, but only as long as all your entities are walkers first, and have other movement methods tacked on top of that. What if you have creatures that can swim and fly, but not walk? What if you wanted to make tiles where it was possible to walk, but not fly through? What if you wanted to add a new kind of traversal, with walls that required that traversal method?&lt;&#x2F;p&gt;
+&lt;p&gt;So I went about building Labyrinth, which tries to generalize map traversal by giving every tile has a &lt;code&gt;can_enter&lt;&#x2F;code&gt; method, which takes an instance of the &lt;code&gt;MoveType&lt;&#x2F;code&gt; enum. It returns a boolean, which determines if an entity with that movement type can enter the tile. The maps themselves implemented the &lt;code&gt;Algorithm2D&lt;&#x2F;code&gt; and &lt;code&gt;BaseMap&lt;&#x2F;code&gt; traits from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;amethyst&#x2F;bracket-lib&quot;&gt;bracket_lib&lt;&#x2F;a&gt;, which meant any of the pathfinding algorithms within could be used.&lt;&#x2F;p&gt;
+&lt;p&gt;Adding those extra steps to pathfinding would obviously incur a cost, but unfortunately I never got far enough benchmark and test the library. There’s also one or two things about the library API that I’d want to change, should I go back for it.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <subtitle>A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas.</subtitle>
+    <link href="https://asuratos.github.io/devlog/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://asuratos.github.io/devlog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-12-21T00:00:00+00:00</updated>
+    <id>https://asuratos.github.io/devlog/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Project Revisit 1: Labyrinth</title>
+        <published>2023-12-21T00:00:00+00:00</published>
+        <updated>2023-12-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://asuratos.github.io/devlog/blog/project-revisit-1-labyrinth/" type="text/html"/>
+        <id>https://asuratos.github.io/devlog/blog/project-revisit-1-labyrinth/</id>
+        
+        <content type="html">&lt;p&gt;Let’s take a look at one of my more recent projects, one that’s most likely to come back from the dead: a map and procedural generation library for roguelike development called &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;asuratos&#x2F;labyrinth-rs&quot;&gt;labyrinth_rs&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;Labyrinth came about when I was attempting to build a roguelike, and I was considering how to do pathfinding when different modes of traversal were available. Often, roguelike maps assume only one way of traversal: walking, and other methods are exceptions to the rule (i.e. “flying” is just walking over a pit if the entity has a &lt;code&gt;can_fly&lt;&#x2F;code&gt; tag, entities can only walk into water tiles when an entity has the &lt;code&gt;can_swim&lt;&#x2F;code&gt;, etc).&lt;&#x2F;p&gt;
+&lt;p&gt;That way of doing things is well and good, but only as long as all your entities are walkers first, and have other movement methods tacked on top of that. What if you have creatures that can swim and fly, but not walk? What if you wanted to make tiles where it was possible to walk, but not fly through? What if you wanted to add a new kind of traversal, with walls that required that traversal method?&lt;&#x2F;p&gt;
+&lt;p&gt;So I went about building Labyrinth, which tries to generalize map traversal by giving every tile has a &lt;code&gt;can_enter&lt;&#x2F;code&gt; method, which takes an instance of the &lt;code&gt;MoveType&lt;&#x2F;code&gt; enum. It returns a boolean, which determines if an entity with that movement type can enter the tile. The maps themselves implemented the &lt;code&gt;Algorithm2D&lt;&#x2F;code&gt; and &lt;code&gt;BaseMap&lt;&#x2F;code&gt; traits from &lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;amethyst&#x2F;bracket-lib&quot;&gt;bracket_lib&lt;&#x2F;a&gt;, which meant any of the pathfinding algorithms within could be used.&lt;&#x2F;p&gt;
+&lt;p&gt;Adding those extra steps to pathfinding would obviously incur a cost, but unfortunately I never got far enough benchmark and test the library. There’s also one or two things about the library API that I’d want to change, should I go back for it.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Reviewing Old Projects</title>
+        <published>2023-12-07T00:00:00+00:00</published>
+        <updated>2023-12-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://asuratos.github.io/devlog/blog/reviewing-old-projects/" type="text/html"/>
+        <id>https://asuratos.github.io/devlog/blog/reviewing-old-projects/</id>
+        
+        <content type="html">&lt;p&gt;When you start a project like this, you’re forced to come face to face with the many failed and abandoned projects left have been left in the past. I’m no exception, and I like to think leaving small projects unfinished is more common than not. It’s easy for people to get excited and start something in a moment of passion, but it’s much harder to follow through until the end.&lt;&#x2F;p&gt;
+&lt;p&gt;Old projects often stay where they are: forgotten and eventually hidden in private repositories, never to be looked at again. But sometimes, when they’re found again, they can reignite the passion that gave them birth, and maybe find a second chance at completion.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>A Foray into SDL2 and WASM in Rust #1</title>
+        <published>2023-11-26T00:00:00+00:00</published>
+        <updated>2023-11-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://asuratos.github.io/devlog/blog/first-steps-in-sdl2-and-wasm/" type="text/html"/>
+        <id>https://asuratos.github.io/devlog/blog/first-steps-in-sdl2-and-wasm/</id>
+        
+        <content type="html">&lt;h2 id=&quot;day-1&quot;&gt;Day 1&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;sdl2-rust-getting-things-installed&quot;&gt;SDL2-Rust: Getting things installed&lt;&#x2F;h3&gt;
+&lt;p&gt;The most difficult part of this was installing SDL properly on Windows.
+I had to look through quite a few of the google results before I found a tutorial I could use, and now writing this I can’t find it again!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;gray-screen-of-life&quot;&gt;Gray screen of life&lt;&#x2F;h3&gt;
+&lt;p&gt;Working with the SDL2 library in Rust was surprisingly not too complicated.
+I guess it just makes sense to me to think about the flow of a program.
+Also it probably helps that I’ve tried and failed to build several games at this point.
+One of these days, I’m going to finish one.&lt;&#x2F;p&gt;
+&lt;div &gt;
+  &lt;img src=&quot;hi_earth.png&quot; alt=&quot;I can make a blank screen, yay&quot;&gt;
+  
+&lt;&#x2F;div&gt;
+&lt;p&gt;For now, I got a window to pop up. I can set its size, title, and the single color that will make up its entire space. I can also quit out by hitting Esc. It’s not much, but it’s a start.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;webassembly&quot;&gt;Webassembly&lt;&#x2F;h2&gt;
+&lt;p&gt;Once again, getting the required libraries and their dependencies made this a nightmare. 
+By the time I was able to even attempt compiling to WASM, it was already late and my brain wasn’t working at full power anymore.&lt;&#x2F;p&gt;
+&lt;p&gt;…and that’s it for now. Baby steps. Next one is trying to get an SDL2 window to compile into WASM, then maybe I can have something more interesting to embed onto these blog posts.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Hello, world</title>
+        <published>2023-11-21T00:00:00+00:00</published>
+        <updated>2023-11-21T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://asuratos.github.io/devlog/blog/hello-world/" type="text/html"/>
+        <id>https://asuratos.github.io/devlog/blog/hello-world/</id>
+        
+        <content type="html">&lt;p&gt;So here begins yet another blog. I’ve tried blogging a few times in my life, and I never really ended up sticking to it.
+Once in high school as a general blog (as if anyone would want to read that), then later in college, where I tried to write about anime to a more focused audience.&lt;&#x2F;p&gt;
+&lt;p&gt;Neither attempt got very far, and both blogs are now lost to the aether.&lt;&#x2F;p&gt;
+&lt;p&gt;Maybe it just wasn’t for me. Maybe I just didn’t have the right mindset. Maybe it’s just a hard habit to keep.
+Either way, let’s hope this one has some legs.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
